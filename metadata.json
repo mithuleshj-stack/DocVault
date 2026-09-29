@@ -1,0 +1,6 @@
+{
+  "name": "DocVault - Document Wallet & Expiry Alerts",
+  "description": "Secure client-encrypted document wallet with Gemini vision OCR expiry extraction, smart renewal reminders, and time-limited emergency share links.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

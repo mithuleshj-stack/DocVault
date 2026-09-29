@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    line-height: 1.68;
+    letter-spacing: -0.012em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  p {
+    line-height: 1.72;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.028em;
+  }
+
+  h1 {
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+
+  h2 {
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+  }
+
+  h3 {
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: 'tnum' 1;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* Print styles for master recovery key sheet */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-recovery-sheet, #printable-recovery-sheet * {
+    visibility: visible;
+  }
+  #printable-recovery-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    background: white;
+    color: black;
+  }
+}
+
+/* Diagonal Watermark for emergency share document preview */
+.watermark-overlay {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(15, 23, 42, 0.05),
+    rgba(15, 23, 42, 0.05) 20px,
+    transparent 20px,
+    transparent 60px
+  );
+}
